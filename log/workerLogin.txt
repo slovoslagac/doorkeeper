@@ -1,0 +1,8 @@
+06.06.2017 09:44:52 | Login : userid = 1
+06.06.2017 09:44:56 | Logout : userid = 1
+06.06.2017 09:45:03 | Login : userid = 1
+06.06.2017 09:45:09 | Logout : userid = 1
+06.06.2017 09:53:15 | Login : userid = 1
+06.06.2017 09:53:19 | Logout : userid = 1
+06.06.2017 09:53:23 | Login : userid = 1
+06.06.2017 10:34:11 | Logout : userid = 1

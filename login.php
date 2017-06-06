@@ -1,13 +1,16 @@
 <?php
 include(join(DIRECTORY_SEPARATOR, array('includes', 'init.php')));
 
-//global $salt;
+if ($session->isLoggedIn()) {
+    redirectTo("index.php");
+}
 
 if (isset($_POST["checklogin"]) ) {
-    $tmpObject = getuserbyusername($_POST["username"]);
-    if (crypt($_POST["password"],$salt) == $tmpObject->password) {
+    $currentuser = getuserbyusername($_POST["username"]);
+    if (crypt($_POST["password"],$salt) == $currentuser->password) {
+        $session->login($currentuser);
+        redirectTo("index.php");
 
-        echo "$tmpObject->username($tmpObject->email)";
     } else {
         echo "Losa lozinka!!!";
     }

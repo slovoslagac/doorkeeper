@@ -15,17 +15,12 @@ class session
     {
         session_start();
         $this->checkLogin();
-
     }
-
 
     public function isLoggedIn()
     {
-
         return $this->loggedin;
-
     }
-
 
     public function login($user)
     {

@@ -8,6 +8,10 @@
 
 include(join(DIRECTORY_SEPARATOR, array('includes', 'init.php')));
 
+if (!$session->isLoggedIn()) {
+    redirectTo("login.php");
+}
+
 if (isset($_POST["saveuser"]) and $_POST["name"] != '' and $_POST["lastname"] != '' and $_POST["username"] != '') {
     if ($_POST["password"] == $_POST["passwordagain"]) {
         $user = new user($_POST["name"], $_POST["lastname"], $_POST["username"], $_POST["email"], crypt($_POST["password"], $salt), $_POST["gguname"], $_POST["ggpassword"]);

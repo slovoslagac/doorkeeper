@@ -7,6 +7,8 @@ include(join(DIRECTORY_SEPARATOR, array('includes', 'init.php')));
  * Time: 21:28
  */
 
+
+
 if (isset($_POST["changepass"]) ) {
     $tmpObject = getuserbyusername($_POST["username"]);
     if (crypt($_POST["password"],$salt) == $tmpObject->password and $_POST["pass"]== $_POST["repass"]) {
