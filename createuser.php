@@ -28,7 +28,7 @@ if (isset($_POST["saveuser"]) and $_POST["name"] != '' and $_POST["lastname"] !=
     <input type="text" name="username" placeholder="username" required>
     <input type="email" name="email" placeholder="email" required onchange="checkinsert()">
     <input type="password" id="password" name="password" placeholder="password" required onchange="checkinsert()">
-    <input type="password" id="passwordagain" name="passwordagain" placeholder="retupe password" required onchange="checkinsert()">
+    <input type="password" placeholder="retupe password" id="passwordagain" name="passwordagain" required onchange="checkinsert()">
     <input type="text" name="gguname" placeholder="GGboost username" required>
     <input type="text" name="ggpassword" placeholder="GGboost password" required>
     <input type="submit" value="Snimi" id="saveuser" name="saveuser" disabled>
